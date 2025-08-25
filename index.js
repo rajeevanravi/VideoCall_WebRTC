@@ -269,25 +269,3 @@ async function leave() {
 }
 
 
-async function leave() {
-  for (trackName in localTracks) {
-    var track = localTracks[trackName];
-    if(track) {
-      track.stop();
-      track.close();
-      localTracks[trackName] = undefined;
-    }
-  }
-  remoteUsers = {};
-  $("#remote-playerlist").html(`
-    <div id="local-player"></div>
-    <div id="controls-bar">
-      <button id="btn-mic" class="control-btn">Mute Mic</button>
-      <button id="btn-camera" class="control-btn">Turn Off Camera</button>
-      <button id="leave" class="control-btn end-btn">End Call</button>
-    </div>
-  `); 
-
-  await client.leave();
-  console.log("client leaves channel success");
-}
