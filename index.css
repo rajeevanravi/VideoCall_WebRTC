@@ -1,0 +1,97 @@
+#join-form {
+  margin-top: 10px;
+}
+
+.tips {
+  font-size: 12px;
+  margin-bottom: 2px;
+  color: gray;
+}
+
+.join-info-text {
+  margin-bottom: 2px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.player {
+  width: 480px;
+  height: 320px;
+}
+
+
+#success-alert, #success-alert-with-token {
+  display: none;
+}
+
+#remote-playerlist {
+  position: relative;
+  width: 100%;
+  height: 86vh;
+  border-radius: 8px;
+  background: #000;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+  resize: both;           /* <-- Make resizable */
+  min-width: 300px;
+  min-height: 200px;
+  max-width: 100vw;
+  max-height: 100vh;
+  /* cursor: grab; */
+}
+
+
+.remote-player {
+  width: 100%;
+  height: 100%;
+}
+
+/* #remote-playerlist.dragging {
+  cursor: grabbing;
+} */
+
+
+#local-player {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 180px;
+  height: 135px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  z-index: 10;
+  cursor: grab;
+}
+#local-player.dragging {
+  cursor: grabbing;
+}
+
+
+.player-name {
+  display: none; 
+}
+
+#btn {
+  position: absolute;
+  bottom: 10px;
+  left: 30%;
+  z-index: 20;
+
+}
+
+
+
+@media (max-width: 640px) {
+  .player {
+    width: 320px;
+    height: 240px;
+  }
+}
